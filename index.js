@@ -1,6 +1,6 @@
 "use strict";
 
-const API = "dd0a3a53b7tb8edf05dbd4ce6o42b46b";
+const API = " YOUR API KEY";
 
 const dayEl = document.querySelector(".default_day");
 const dateEl = document.querySelector(".default_date");
@@ -135,7 +135,7 @@ async function displayForeCast(lat, long) {
 function forecast(frContent) {
   const day = new Date(frContent.dt_txt);
   const dayName = days[day.getDay()];
-  const splitDay = dayName.split("", 7);
+  const splitDay = dayName.split("", 3);
   const joinDay = splitDay.join("");
 
   // console.log(dayName);
