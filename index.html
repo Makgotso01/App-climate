@@ -10,84 +10,45 @@
       rel="stylesheet" />
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <title>weather app</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="src/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Meteo App</title>
   </head>
   <body>
-    <div class="container">
-      <div class="wrapper">
-        <div class="img_section">
-          <div class="default_info">
-            <h2 class="default_day">Sunday</h2>
-            <span class="default_date">25 February 2024 </span>
-            <div class="icons">
-              <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="" />
-              <h2 class="weather_temp">22°C</h2>
-              <h3 class="cloudtxt">Overcast Clouds</h3>
-            </div>
+    <div class="weather-app">
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            id="search-form-input"
+            class="search-form-input" />
+          <input type="submit" value="Search" class="search-form-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city" id="city"></h1>
+            <p class="weather-app-details">
+              <span id="time"></span>,
+              <span id="description"></span>
+              <br />
+              Humidity: <strong id="humidity"></strong>, Wind:
+              <strong id="wind-speed"></strong>
+            </p>
+          </div>
+          <div class="weather-app-temperature-container">
+            <div id="icon"></div>
+            <div class="weather-app-temperature" id="temperature"></div>
+            <div class="weatehr-app-unit">°C</div>
           </div>
         </div>
-        <div class="content_section">
-          <form>
-            <input
-              type="text"
-              placeholder="Search Location"
-              class="input_field" />
-            <button type="submit" class="btn_search">Search</button>
-          </form>
+      </main>
 
-          <div class="day_info">
-            <div class="content">
-              <p class="title">NAME</p>
-              <span class="value"> Johannesburg</span>
-            </div>
-            <div class="content">
-              <p class="title">TEMP</p>
-              <span class="value">23°C</span>
-            </div>
-            <div class="content">
-              <p class="title">HUMIDITY</p>
-              <span class="value">2%</span>
-            </div>
-            <div class="content">
-              <p class="title">WIND SPEED</p>
-              <span class="value">2.92 Km/h</span>
-            </div>
-          </div>
-
-          <div class="list_content">
-            <ul>
-              <li>
-                <img src="https://openweathermap.org/img/wn/10d@2x.png" />
-                <span>Sat</span>
-                <span class="day_temp">23°C</span>
-              </li>
-              <li>
-                <img src="https://openweathermap.org/img/wn/10d@2x.png" />
-                <span>Sat</span>
-                <span class="day_temp">23°C</span>
-              </li>
-              <li>
-                <img src="https://openweathermap.org/img/wn/10d@2x.png" />
-                <span>Sat</span>
-                <span class="day_temp">23°C</span>
-              </li>
-              <li>
-                <img src="https://openweathermap.org/img/wn/10d@2x.png" />
-                <span>Sat</span>
-                <span class="day_temp">23°C</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
- This project was coded by
-        <a href="https://github.com/matthieua/" target="_blank">
-          Makgotso ntai</a
-        >, is
+      <footer>
+        This project was coded by
+        <a href="https://github.com/matthieua/" target="_blank"> Matt Delac</a>,
+        is
         <a href="https://github.com/matthieua/meteo" target="_blank"
           >open-sourced on GitHub</a
         >
