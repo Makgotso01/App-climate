@@ -1,4 +1,5 @@
 "use strict";
+
 function refreshWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
@@ -20,7 +21,6 @@ function refreshWeather(response) {
 
   getForecast(response.data.city);
 }
-
 function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
@@ -42,7 +42,7 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 function searchCity(city) {
-  let apiKey = "dd0a3a53b7tb8edf05dbd4ce6o42b46b";
+  let apiKey = " dd0a3a53b7tb8edf05dbd4ce6o42b46b";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(refreshWeather);
 }
@@ -61,7 +61,7 @@ function formatDay(timestamp) {
 }
 
 function getForecast(city) {
-  let apiKey = "b2a5adcct04b33178913oc335f405433";
+  let apiKey = "dd0a3a53b7tb8edf05dbd4ce6o42b46b";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
   axios(apiUrl).then(displayForecast);
 }
