@@ -1,6 +1,6 @@
 "use strict";
 
-const API = " YOUR API KEY";
+const API = "dd0a3a53b7tb8edf05dbd4ce6o42b46b";
 
 const dayEl = document.querySelector(".default_day");
 const dateEl = document.querySelector(".default_date");
@@ -80,7 +80,11 @@ async function findLocation(name) {
     }
   } catch (error) {}
 }
-
+function searchCity(city) {
+  let apiKey = "b2a5adcct04b33178913oc335f405433";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(refreshWeather);
+}
 // display image content and temp
 function displayImageContent(data) {
   return `<img src="https://openweathermap.org/img/wn/${
