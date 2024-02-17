@@ -1,6 +1,10 @@
 "use strict";
 
-const API = "dd0a3a53b7tb8edf05dbd4ce6o42b46b";
+function searchCity(city) {
+  let apiKey = "dd0a3a53b7tb8edf05dbd4ce6o42b46b";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(refreshWeather);
+}
 
 const dayEl = document.querySelector(".default_day");
 const dateEl = document.querySelector(".default_date");
