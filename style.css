@@ -98,7 +98,7 @@ body {
   border-radius: 5px;
   padding: 0.7rem 1rem;
   font-family: inherit;
-  color: #8dfc0e;
+  color: whitesmoke;
   font-size: 1.5rem;
 }
 
@@ -113,7 +113,7 @@ body {
   font-size: 1.2rem;
   outline: none;
   border: none;
-  background: #31af85;
+  background: #3b8edb;
   color: #fff;
   cursor: pointer;
 }
